@@ -15,7 +15,7 @@ const createDefaultDeckIfRequired = async () => {
 
   if (decks) return;
 
-  await AsyncStorage.setItem("decks", JSON.stringify(defaultDecks));
+  await AsyncStorage.setItem("decks", JSON.stringify([defaultDecks]));
 };
 
 export const Home: React.FC<HomeProps> = ({ navigation }) => {
@@ -24,7 +24,7 @@ export const Home: React.FC<HomeProps> = ({ navigation }) => {
 
     createDefaultDeckIfRequired().then(() => {
       timeout = setTimeout(() => {
-        navigation.navigate("Decks");
+        navigation.replace("Decks");
       }, 1500);
     });
 
@@ -35,7 +35,7 @@ export const Home: React.FC<HomeProps> = ({ navigation }) => {
     <Container className="justify-center items-center">
       <Entypo name="drink" size={100} color={colors.white} />
 
-      <Text className="font-bold font-lg text-primary-contrast text-6xl mt-8">Drink it!</Text>
+      <Text className="font-bold text-primary-contrast text-6xl mt-8">Drink it!</Text>
     </Container>
   );
 };
