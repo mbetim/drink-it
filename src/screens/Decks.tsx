@@ -14,7 +14,7 @@ export const Decks: React.FC<DecksProps> = ({ navigation }) => {
 
   return (
     <Container style={{ paddingTop: Constants.statusBarHeight }}>
-      <Text className="text-primary-contrast text-2xl text-center mt-8">Decks</Text>
+      <Text className="mt-8 text-center text-2xl text-primary-contrast">Decks</Text>
 
       <FlatList
         data={decks}

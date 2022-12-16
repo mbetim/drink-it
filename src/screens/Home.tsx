@@ -32,10 +32,10 @@ export const Home: React.FC<HomeProps> = ({ navigation }) => {
   }, []);
 
   return (
-    <Container className="justify-center items-center">
+    <Container className="items-center justify-center">
       <Entypo name="drink" size={100} color={colors.white} />
 
-      <Text className="font-bold text-primary-contrast text-6xl mt-8">Drink it!</Text>
+      <Text className="mt-8 text-6xl font-bold text-primary-contrast">Drink it!</Text>
     </Container>
   );
 };

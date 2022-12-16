@@ -43,14 +43,14 @@ export const Game: React.FC<GameProps> = ({ route }) => {
     <Container style={{ paddingTop: Constants.statusBarHeight }}>
       <TouchableWithoutFeedback onPress={() => newNumber()}>
         <View className="flex-1">
-          <Text className="text-center text-white text-2xl font-bold mt-4">
+          <Text className="mt-4 text-center text-2xl font-bold text-white">
             Round: {generatedNumbers.length + 1}
           </Text>
 
-          <View className="flex-1 justify-center items-center">
+          <View className="flex-1 items-center justify-center">
             <PlayingCard number={currentNumber + 1} />
 
-            <Text className="mt-2 text-center text-xl text-white font-bold">
+            <Text className="mt-2 text-center text-xl font-bold text-white">
               {deck.cards[currentNumber]?.name}
             </Text>
           </View>

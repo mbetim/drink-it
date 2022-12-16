@@ -9,7 +9,7 @@ interface DeckListItemProps {
 
 export const DeckListItem: React.FC<DeckListItemProps> = ({ deck, onPress }) => (
   <TouchableWithoutFeedback onPress={onPress}>
-    <View className="rounded bg-white shadow-sm my-2 p-2">
+    <View className="my-2 rounded bg-white p-2 shadow-sm">
       <Text className="text-lg text-primary-dark">{deck.name}</Text>
       <Text className="font-light text-primary-light">{deck.cards.length} cards</Text>
     </View>
