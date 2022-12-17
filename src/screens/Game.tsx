@@ -44,7 +44,7 @@ export const Game: React.FC<GameProps> = ({ route }) => {
       <TouchableWithoutFeedback onPress={() => newNumber()}>
         <View className="flex-1">
           <Text className="mt-4 text-center text-2xl font-bold text-white">
-            Round: {generatedNumbers.length + 1}
+            Round: {generatedNumbers.length}
           </Text>
 
           <View className="flex-1 items-center justify-center">
